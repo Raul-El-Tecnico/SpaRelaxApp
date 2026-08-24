@@ -1,0 +1,54 @@
+/* 1. Grundläggande inställningar för hela sidan */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: #f9f7f2; /* Ljus beige/sand */
+    color: #4a4a4a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Marginal i botten så att innehållet inte hamnar bakom footern */
+    margin-bottom: 100px;
+}
+
+/* 2. Menyn (Navbar) */
+.navbar {
+    background-color: #ffffff !important;
+    border-bottom: 2px solid #d4e0d4 !important; /* Ljusgrön kant */
+}
+
+.navbar-brand {
+    color: #5d7a5d !important; /* Lugn grön färg */
+    font-weight: bold;
+}
+
+/* 3. Knappar */
+.btn-primary {
+    background-color: #8da38d; /* Dämpad grön knapp */
+    border-color: #8da38d;
+}
+
+    .btn-primary:hover {
+        background-color: #6b7e6b;
+        border-color: #6b7e6b;
+    }
+
+/* 4. Footern (Längst ner på sidan) */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    background-color: #ffffff;
+    border-top: 1px solid #d4e0d4;
+    color: #8da38d;
+    z-index: 10;
+}
+
+/* 5. Bild-fix för startsidan */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}

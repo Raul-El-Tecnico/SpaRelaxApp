@@ -1,0 +1,51 @@
+﻿@page "/Privacy"
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Om Zen Spa & Relax";
+}
+
+<div class="container mt-5">
+    <div class="row align-items-center">
+        <!-- Text-kolumn -->
+        <div class="col-md-6">
+            <h1 class="display-4" style="color: #5d7a5d; font-weight: bold;">Vår Filosofi</h1>
+            <p class="lead mt-4">
+                På Zen Spa & Relax tror vi på att återfå balansen mellan kropp och själ.
+                I en stressig vardag behöver vi alla en plats där tiden står stilla.
+            </p>
+            <p>
+                Vår anläggning är skapad med inspiration från naturens lugn. Med det helande vattnet
+                och våra experters varma handlag erbjuder vi en upplevelse utöver det vanliga.
+                Varje detalj, från doften av eteriska oljor till den dämpade belysningen,
+                är noga utvald för din totala avkoppling.
+            </p>
+            <div class="mt-4">
+                <ul class="list-unstyled">
+                    <li>🌿 <strong>Hållbarhet:</strong> Vi använder endast ekologiska produkter.</li>
+                    <li>💧 <strong>Renhet:</strong> Vårt vatten renas med den senaste tekniken för högsta kvalitet.</li>
+                    <li>🙏 <strong>Närvaro:</strong> Vi fokuserar helt på dig under din vistelse.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bild-kolumn -->
+        <div class="col-md-6 mt-4 mt-md-0">
+            <div class="position-relative">
+                <img src="~/images/spa-relax.jpg"
+                     class="img-fluid rounded shadow-lg"
+                     alt="Avkoppling i poolen"
+                     style="border: 8px solid white;">
+                <!-- En liten dekorativ ruta bakom bilden -->
+                <div style="position: absolute; top: -20px; right: -20px; width: 100px; height: 100px; background-color: #d4e0d4; z-index: -1; border-radius: 50%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Extra citat-sektion längst ner -->
+    <div class="row mt-5">
+        <div class="col-12 text-center py-5" style="background-color: #ffffff; border-radius: 15px; border: 1px solid #d4e0d4;">
+            <h2 class="fst-italic" style="color: #8da38d;">"Den bästa tiden att slappna av är när du inte har tid för det."</h2>
+            <p class="mt-3">- Sydney J. Harris</p>
+        </div>
+    </div>
+</div>
