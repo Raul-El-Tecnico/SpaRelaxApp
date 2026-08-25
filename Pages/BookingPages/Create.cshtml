@@ -1,0 +1,55 @@
+@page
+@model SpaRelaxApp.Pages.BookingPages.CreateModel
+
+@{
+    ViewData["Title"] = "Boka tid";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 shadow p-4 bg-white rounded">
+
+            <h2 class="text-center mb-4" style="color: #5d7a5d;">Boka din behandling</h2>
+            <p class="text-center text-muted">Välj en tjänst och en tid som passar dig.</p>
+            <hr />
+
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <!-- Dropdown för behandlingar -->
+                <div class="form-group mb-3">
+                    <label asp-for="Booking.ServiceType" class="control-label fw-bold">Vilken behandling önskas?</label>
+                    <select asp-for="Booking.ServiceType" class="form-select">
+                        <option value="">-- Välj en behandling --</option>
+                        <option value="Klassisk Massage (60 min)">Klassisk Massage (60 min)</option>
+                        <option value="Ansiktsbehandling Deluxe">Ansiktsbehandling Deluxe</option>
+                        <option value="Aromaterapi">Aromaterapi</option>
+                        <option value="Hot Stone Massage">Hot Stone Massage</option>
+                        <option value="Fotvård & Pedikyr">Fotvård & Pedikyr</option>
+                        <option value="Spabad & Relax">Spabad & Relax</option>
+                    </select>
+                    <span asp-validation-for="Booking.ServiceType" class="text-danger"></span>
+                </div>
+
+                <!-- Datum och Tid -->
+                <div class="form-group mb-4">
+                    <label asp-for="Booking.BookingDate" class="control-label fw-bold">Datum och klockslag</label>
+                    <input asp-for="Booking.BookingDate" class="form-control" type="datetime-local" />
+                    <span asp-validation-for="Booking.BookingDate" class="text-danger"></span>
+                </div>
+
+                <!-- Knappar -->
+                <div class="form-group d-grid gap-2">
+                    <input type="submit" value="Bekräfta bokning" class="btn btn-primary btn-lg shadow-sm" />
+                    <a asp-page="./Index" class="btn btn-link text-muted">Tillbaka till mina bokningar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

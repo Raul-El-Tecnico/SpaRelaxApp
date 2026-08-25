@@ -1,0 +1,37 @@
+@page
+@model SpaRelaxApp.Pages.BookingPages.DetailsModel
+
+@{
+    ViewData["Title"] = "Detaljer";
+}
+
+<h1>Detaljer om bokning</h1>
+
+<div>
+    <h4>Din bokning</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.ServiceType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Booking.ServiceType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.BookingDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Booking.BookingDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Booking.UserId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Booking.UserId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Booking.Id">Redigera</a> |
+    <a asp-page="./Index">Tillbaka till mina bokningar</a>
+</div>
